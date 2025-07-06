@@ -32,7 +32,13 @@ function App() {
 
 
 
-  
+  // return (
+  //   <>
+  //   <div class="w-screen bg-green-300 text-blue-500 text-center py-3 fixed top-0 left-0 z-50">
+  // <h1 class="text-lg font-semibold">Currency convertor</h1>
+  // </div>    
+  //   </>
+  // )
   return (
         <div
             className="w-screen h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
@@ -45,17 +51,17 @@ function App() {
                     <form
                         onSubmit={(e) => {
                       e.preventDefault();
-                        convert(); 
+                        convert(); // ← this triggers the conversion!
                        }}
                     >
                         <div className="w-full mb-1">
                             <InputBox
   label="From"
-  amount={Amount}                       
+  amount={Amount}                       // ✅ lowercase 'amount'
   onAmountchange={(amount) => setAmount(amount)}
   currencyOptions={options}
-  onCurrencychange={(currency) => setfrom(currency)} 
-  selectcurrency={from}                
+  onCurrencychange={(currency) => setfrom(currency)} // ✅ fix casing
+  selectcurrency={from}                // ✅ lowercase 'selectcurrency'
   amountDisable={false}
   currencyDisable={false}
 />
@@ -73,12 +79,12 @@ function App() {
                         <div className="w-full mt-1 mb-4">
                            <InputBox
   label="To"
-  amount={ConvertedAmount}             
-  onAmountchange={() => {}}           
+  amount={ConvertedAmount}             // ✅ lowercase
+  onAmountchange={() => {}}            // ✅ dummy function to avoid error
   currencyOptions={options}
-  onCurrencychange={(currency) => setTo(currency)}
+  onCurrencychange={(currency) => setTo(currency)} // ✅ fix casing
   selectcurrency={to}
-  amountDisable={true}               
+  amountDisable={true}                 // ✅ make it readonly
   currencyDisable={false}
 />
                         </div>
