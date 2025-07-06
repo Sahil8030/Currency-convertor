@@ -35,7 +35,7 @@ function App() {
   
   return (
         <div
-            className="w-screen min-h-[100dvh] flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            className="w-screen h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
                 backgroundImage: `url('https://img.freepik.com/premium-vector/money-transfer-global-currency-stock-exchange-background_115579-579.jpg?semt=ais_items_boosted&w=740')`,
             }}
