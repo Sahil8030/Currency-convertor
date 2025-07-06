@@ -32,16 +32,10 @@ function App() {
 
 
 
-  // return (
-  //   <>
-  //   <div class="w-screen bg-green-300 text-blue-500 text-center py-3 fixed top-0 left-0 z-50">
-  // <h1 class="text-lg font-semibold">Currency convertor</h1>
-  // </div>    
-  //   </>
-  // )
+  
   return (
         <div
-            className="w-screen h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            className="w-screen  flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
                 backgroundImage: `url('https://img.freepik.com/premium-vector/money-transfer-global-currency-stock-exchange-background_115579-579.jpg?semt=ais_items_boosted&w=740')`,
             }}
@@ -51,17 +45,17 @@ function App() {
                     <form
                         onSubmit={(e) => {
                       e.preventDefault();
-                        convert(); // ← this triggers the conversion!
+                        convert(); 
                        }}
                     >
                         <div className="w-full mb-1">
                             <InputBox
   label="From"
-  amount={Amount}                       // ✅ lowercase 'amount'
+  amount={Amount}                       
   onAmountchange={(amount) => setAmount(amount)}
   currencyOptions={options}
-  onCurrencychange={(currency) => setfrom(currency)} // ✅ fix casing
-  selectcurrency={from}                // ✅ lowercase 'selectcurrency'
+  onCurrencychange={(currency) => setfrom(currency)} 
+  selectcurrency={from}                
   amountDisable={false}
   currencyDisable={false}
 />
@@ -79,12 +73,12 @@ function App() {
                         <div className="w-full mt-1 mb-4">
                            <InputBox
   label="To"
-  amount={ConvertedAmount}             // ✅ lowercase
-  onAmountchange={() => {}}            // ✅ dummy function to avoid error
+  amount={ConvertedAmount}             
+  onAmountchange={() => {}}           
   currencyOptions={options}
-  onCurrencychange={(currency) => setTo(currency)} // ✅ fix casing
+  onCurrencychange={(currency) => setTo(currency)}
   selectcurrency={to}
-  amountDisable={true}                 // ✅ make it readonly
+  amountDisable={true}               
   currencyDisable={false}
 />
                         </div>
